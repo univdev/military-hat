@@ -1,12 +1,8 @@
-import { CongratrationMessage } from './components/CongratrationMessage/CongratrationMessage';
-import { MilitaryHat } from './components/MilitaryHat/MilitaryHat';
+import { View } from './View';
 
 function App () {
   return (
-    <div className="App">
-      <CongratrationMessage />
-      <MilitaryHat />
-    </div>
+    <View />
   );
 }
 
