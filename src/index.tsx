@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'normalize.css';
+import { ConfettiProvider } from './components/ConfettiEffect';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ConfettiProvider>
+      <App />
+    </ConfettiProvider>
   </React.StrictMode>
 );
 
