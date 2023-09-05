@@ -20,6 +20,7 @@ export const ParadeConfettiCanvas = ({
   const confettiOptionsContext = useContext(ConfettiOptionContext);
 
   if (confettiOptionsContext === undefined) throw new Error('정상적인 경로로 Mount 된 Confetti 컴포넌트가 아닙니다.');
+  if (y < 0 || y > 1) throw new Error('y 값은 0 에서 1 사이여야 합니다.');
 
   const { duration } = confettiOptionsContext;
   const mountedDate = useRef(Date.now());
@@ -27,7 +28,6 @@ export const ParadeConfettiCanvas = ({
 
   const effect = useCallback(() => {
     if (confettiCanvas.current === undefined) throw new Error('Confetti를 실행할 canvas를 찾지 못했습니다.');
-    if (y < 0 || y > 1) throw new Error('y 값은 0 에서 1 사이여야 합니다.');
 
     const currentDate = Date.now();
 

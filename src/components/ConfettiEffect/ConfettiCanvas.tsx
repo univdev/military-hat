@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 import confetti from 'canvas-confetti';
 import { forwardRef, useImperativeHandle, useRef } from 'react';
-import { animated } from '@react-spring/web';
 
 export const ConfettiCanvas = forwardRef<confetti.CreateTypes | undefined>((_, ref) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -13,7 +12,7 @@ export const ConfettiCanvas = forwardRef<confetti.CreateTypes | undefined>((_, r
   });
 
   return (
-    <animated.canvas
+    <canvas
       ref={canvasRef}
       css={css`
         position: fixed;

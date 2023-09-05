@@ -4,15 +4,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'normalize.css';
 import { ConfettiProvider } from './components/ConfettiEffect';
+import { ErrorReceiver } from './components/ErrorReceiver/ErrorReceiver';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ConfettiProvider>
-      <App />
-    </ConfettiProvider>
+    <ErrorReceiver>
+      <ConfettiProvider>
+        <App />
+      </ConfettiProvider>
+    </ErrorReceiver>
   </React.StrictMode>
 );
 
