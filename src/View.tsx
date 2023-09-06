@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { ParadeConfettiCanvas } from './components/ConfettiEffect/ParadeConfettiCanvas';
 import { AspectMilitaryHat } from './_comp/AspectMilitaryHat';
 import { AppStyleCustomizer } from './_comp/AppStyleCustomizer';
+import { TadaAudioPlayer } from './_comp/TadaAudioPlayer/TadaAudioPlayer';
 
 export const View = () => {
   const { show } = useConfetti();
@@ -20,6 +21,7 @@ export const View = () => {
       `}
     >
       <AppStyleCustomizer />
+      <TadaAudioPlayer />
       <div
         className="Container"
         css={css`

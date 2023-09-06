@@ -6,18 +6,19 @@ import 'normalize.css';
 import { ConfettiProvider } from './components/ConfettiEffect';
 import { ErrorReceiver } from './components/ErrorReceiver/ErrorReceiver';
 import './assets/styles/global.scss';
+import { AudioPlayerProvider } from './components/AudioPlayer/AudioPlayerProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <ErrorReceiver>
-      <ConfettiProvider>
+  <ErrorReceiver>
+    <ConfettiProvider>
+      <AudioPlayerProvider>
         <App />
-      </ConfettiProvider>
-    </ErrorReceiver>
-  </React.StrictMode>
+      </AudioPlayerProvider>
+    </ConfettiProvider>
+  </ErrorReceiver>
 );
 
 // If you want to start measuring performance in your app, pass a function
