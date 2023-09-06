@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import { useConfetti } from './components/ConfettiEffect';
 import { useEffect } from 'react';
 import { ParadeConfettiCanvas } from './components/ConfettiEffect/ParadeConfettiCanvas';
+import { AppStyleCustomizer } from './_comp/AppStyleCustomizer/AppStyleCustomizer';
 
 export const View = () => {
   const { show } = useConfetti();
@@ -17,6 +18,7 @@ export const View = () => {
         display: block;
       `}
     >
+      <AppStyleCustomizer />
       <div
         className="Container"
         css={css`
@@ -25,7 +27,7 @@ export const View = () => {
           margin: auto;
         `}
       >
-        asdsda
+        Hello world!
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 export const MilitaryHat = () => {
   return (
     <div className="MilitaryHat">
-      asd
+      Hat
     </div>
   );
 };

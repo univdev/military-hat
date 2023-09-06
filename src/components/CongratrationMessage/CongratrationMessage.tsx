@@ -18,7 +18,9 @@ export const CongratrationMessage = () => {
   }, []);
 
   return (
-    <div className="CongrationMessage">
+    <div
+      className="CongrationMessage"
+    >
       { receiverName }님! 전역을 축하드립니다!
     </div>
   );
