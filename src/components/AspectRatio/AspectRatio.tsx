@@ -20,6 +20,9 @@ export const AspectRatio = ({
         width: 100%;
         height: 100%;
       `}
+      style={{
+        paddingBottom: `${verticalRatio}%`
+      }}
     >
       <div
         className="AspectRatio__Container"
@@ -29,13 +32,18 @@ export const AspectRatio = ({
           top: 0;
           bottom: 0;
           right: 0;
-          width: 100%;
         `}
-        style={{
-          paddingBottom: `${verticalRatio}%`
-        }}
       >
-        { children }
+        <div
+          className="AspectRatio__Content"
+          css={css`
+            position: relative;
+            width: 100%;
+            height: 100%;
+          `}
+        >
+          { children }
+        </div>
       </div>
     </div>
   );

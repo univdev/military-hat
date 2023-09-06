@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import 'normalize.css';
 import { ConfettiProvider } from './components/ConfettiEffect';
 import { ErrorReceiver } from './components/ErrorReceiver/ErrorReceiver';
+import './assets/styles/global.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

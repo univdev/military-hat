@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 import { useConfetti } from './components/ConfettiEffect';
 import { useEffect } from 'react';
 import { ParadeConfettiCanvas } from './components/ConfettiEffect/ParadeConfettiCanvas';
-import { AppStyleCustomizer } from './_comp/AppStyleCustomizer/AppStyleCustomizer';
-import { MilitaryHat } from './components/MilitaryHat/MilitaryHat';
+import { AspectMilitaryHat } from './_comp/AspectMilitaryHat';
+import { AppStyleCustomizer } from './_comp/AppStyleCustomizer';
 
 export const View = () => {
   const { show } = useConfetti();
@@ -28,7 +28,16 @@ export const View = () => {
           margin: auto;
         `}
       >
-        <MilitaryHat />
+        <div
+          className="MilitaryHat__Container"
+          css={css`
+            max-width: 400px;
+            width: 100%;
+            margin: auto;
+          `}
+        >
+          <AspectMilitaryHat />
+        </div>
       </div>
     </div>
   );
