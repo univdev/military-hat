@@ -3,6 +3,7 @@ import { useConfetti } from './components/ConfettiEffect';
 import { useEffect } from 'react';
 import { ParadeConfettiCanvas } from './components/ConfettiEffect/ParadeConfettiCanvas';
 import { AppStyleCustomizer } from './_comp/AppStyleCustomizer/AppStyleCustomizer';
+import { MilitaryHat } from './components/MilitaryHat/MilitaryHat';
 
 export const View = () => {
   const { show } = useConfetti();
@@ -27,7 +28,7 @@ export const View = () => {
           margin: auto;
         `}
       >
-        Hello world!
+        <MilitaryHat />
       </div>
     </div>
   );

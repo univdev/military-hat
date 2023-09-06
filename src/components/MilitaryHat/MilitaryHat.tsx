@@ -1,7 +1,11 @@
+import { AspectRatio } from '../AspectRatio';
+
 export const MilitaryHat = () => {
   return (
-    <div className="MilitaryHat">
-      Hat
-    </div>
+    <AspectRatio>
+      <div className="MilitaryHat">
+        Hello world!
+      </div>
+    </AspectRatio>
   );
 };
