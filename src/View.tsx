@@ -5,6 +5,7 @@ import { ParadeConfettiCanvas } from './components/ConfettiEffect/ParadeConfetti
 import { AspectMilitaryHat } from './_comp/AspectMilitaryHat';
 import { AppStyleCustomizer } from './_comp/AppStyleCustomizer';
 import { TadaAudioPlayer } from './_comp/TadaAudioPlayer/TadaAudioPlayer';
+import { CongratrationMessage } from './components/CongratrationMessage/CongratrationMessage';
 
 export const View = () => {
   const { show } = useConfetti();
@@ -17,7 +18,7 @@ export const View = () => {
     <div
       className="View"
       css={css`
-        display: block;
+        height: 100vh;
       `}
     >
       <AppStyleCustomizer />
@@ -25,20 +26,37 @@ export const View = () => {
       <div
         className="Container"
         css={css`
-          max-width: 1136px;
-          width: 100%;
           margin: auto;
+          max-width: 560px;
+          width: 100%;
+          height: 100%;
         `}
       >
         <div
           className="MilitaryHat__Container"
           css={css`
-            max-width: 400px;
+            display: flex;
+            flex-direction: column;
             width: 100%;
-            margin: auto;
+            min-height: 100%;
           `}
         >
-          <AspectMilitaryHat />
+          <div
+            className="MilitaryHat__Content"
+            css={css`
+              flex: auto;
+            `}
+          >
+            <CongratrationMessage />
+          </div>
+          <div
+            className="MilitaryHat__Footer"
+            css={css`
+              padding-bottom: 48px;
+            `}
+          >
+            <AspectMilitaryHat />
+          </div>
         </div>
       </div>
     </div>

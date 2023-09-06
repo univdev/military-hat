@@ -1,6 +1,6 @@
 import { Fragment, useCallback, useEffect, useRef } from 'react';
 import Tada from '../../assets/mp3/tada.mp3';
-import { useAudioPlayer } from '../../components/AudioPlayer/useAudioPlayer';
+import { useAudioPlayer } from '../../components/AudioPlayer';
 
 export const TadaAudioPlayer = () => {
   const id = useRef<number>();

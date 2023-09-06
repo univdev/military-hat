@@ -22,7 +22,13 @@ export const AppStyleCustomizer = () => {
   return (
     <HTMLStyleCustomizer
       style={css`
+        width: 100%;
+        height: 100vh;
         background-color: ${backgroundColor};
+        body,
+        #root {
+          height: 100%;
+        }
       `}
     />
   );

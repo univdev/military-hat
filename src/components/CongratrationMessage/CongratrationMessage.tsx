@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { css } from '@emotion/react';
 import { queryToString } from '../../utils/query-to-string';
 
 /**
@@ -18,10 +19,13 @@ export const CongratrationMessage = () => {
   }, []);
 
   return (
-    <div
+    <h1
       className="CongrationMessage"
+      css={css`
+        text-align: center;
+      `}
     >
       { receiverName }님! 전역을 축하드립니다!
-    </div>
+    </h1>
   );
 };

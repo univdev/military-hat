@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 import { type AudioPlayerProps } from './AudioPlayer.types';
+import { css } from '@emotion/react';
 
 export const AudioPlayer = forwardRef<HTMLAudioElement | undefined, AudioPlayerProps>(({
   loop,
@@ -20,6 +21,14 @@ export const AudioPlayer = forwardRef<HTMLAudioElement | undefined, AudioPlayerP
 
   return (
     <audio
+      tabIndex={-1}
+      css={css`
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        pointer-events: none;
+      `}
       ref={audioRef}
       src={src}
       loop={loop}
